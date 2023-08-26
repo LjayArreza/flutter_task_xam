@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_task_xam/app/core/base/base_controller.dart';
+import 'package:flutter_task_xam/data/model/upload_photo_response.dart';
+import 'package:flutter_task_xam/domain/repository/upload_photo_repository.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class UploadPhotoController extends BaseController {
+  UploadPhotoRepository uploadPhotoRepo;
+  UploadPhotoController(this.uploadPhotoRepo);
   var commentsController = TextEditingController();
   var detailsDateController = TextEditingController();
   var detailsAreaController = TextEditingController();
@@ -11,10 +16,15 @@ class UploadPhotoController extends BaseController {
   var tagsController = TextEditingController();
   var selectEventController = TextEditingController();
 
+  var isLoading = false.obs;
+
   var isCheckboxSelected = false.obs;
   var isEventSelected = false.obs;
+
   var selectedPhotos = <String>[].obs;
+
   List<String> selectAreaItems = ['Area 1', 'Area 2', 'Area 3', 'Area 4'];
+
   List<String> selectTaskCategoryItems = [
     'Category 1',
     'Category 2',
@@ -22,7 +32,9 @@ class UploadPhotoController extends BaseController {
     'Category 4'
   ];
   List<String> selectEventsItems = ['Event 1', 'Event 2', 'Event 3', 'Event 4'];
+
   RxString selectedDropdownValue = RxString('');
+
   var selectedDate = ''.obs;
 
   void setSelectedDropdownValue(String value) {
@@ -72,6 +84,28 @@ class UploadPhotoController extends BaseController {
     if (picked != null) {
       selectedDate.value = DateFormat('MM/dd/yyyy').format(picked);
       detailsDateController.text = selectedDate.value;
+    }
+  }
+
+// If this is a real api, this is where we set the images and all details needed to pass in the repositories param.
+  Future<void> uploadPhoto() async {
+    isLoading(true);
+    var response =
+        await uploadPhotoRepo.setUploadPhoto(name: 'morpheus', job: 'leader');
+    if (response is UploadPhotoResponse) {
+      isLoading(false);
+      Fluttertoast.showToast(
+        msg: 'Upload photo successfully!',
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.CENTER,
+      );
+    } else {
+      isLoading(false);
+      Fluttertoast.showToast(
+        msg: 'Failed to upload photo!',
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.CENTER,
+      );
     }
   }
 }
