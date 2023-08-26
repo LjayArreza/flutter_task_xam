@@ -7,6 +7,7 @@ import 'package:flutter_task_xam/presentation/controllers/upload_photo.controlle
 import 'package:flutter_task_xam/presentation/widgets/add_photo_section.widget.dart';
 import 'package:flutter_task_xam/presentation/widgets/comments_section.widget.dart';
 import 'package:flutter_task_xam/presentation/widgets/details_section.widget.dart';
+import 'package:flutter_task_xam/presentation/widgets/link_existing_event_section.widget.dart';
 
 class UploadPhotoView extends BaseView<UploadPhotoController> {
   const UploadPhotoView({super.key});
@@ -61,7 +62,7 @@ class UploadPhotoView extends BaseView<UploadPhotoController> {
           Container(
             height: MediaQuery.of(context).size.height,
             color: Colors.grey.shade200,
-            child: Column(
+            child: ListView(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
@@ -85,6 +86,8 @@ class UploadPhotoView extends BaseView<UploadPhotoController> {
                 const AddPhotoSectionWidget(),
                 const CommentSectionWidget(),
                 const DetailsSectionWidget(),
+                const LinkExistingEventSectionWidget(),
+                const SizedBox(height: 300),
               ],
             ),
           )

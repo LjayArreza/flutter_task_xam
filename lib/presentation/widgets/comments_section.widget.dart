@@ -37,6 +37,7 @@ class CommentSectionWidget extends GetWidget<UploadPhotoController> {
                 ),
                 TextFormField(
                   controller: controller.commentsController,
+                  style: const TextStyle(fontSize: 12),
                   decoration: const InputDecoration(
                     hintText: 'Comments',
                     hintStyle: TextStyle(fontSize: 12),

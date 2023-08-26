@@ -9,7 +9,10 @@ class UploadPhotoController extends BaseController {
   var detailsAreaController = TextEditingController();
   var taskCategoryController = TextEditingController();
   var tagsController = TextEditingController();
+  var selectEventController = TextEditingController();
+
   var isCheckboxSelected = false.obs;
+  var isEventSelected = false.obs;
   var selectedPhotos = <String>[].obs;
   List<String> selectAreaItems = ['Area 1', 'Area 2', 'Area 3', 'Area 4'];
   List<String> selectTaskCategoryItems = [
@@ -18,6 +21,7 @@ class UploadPhotoController extends BaseController {
     'Category 3',
     'Category 4'
   ];
+  List<String> selectEventsItems = ['Event 1', 'Event 2', 'Event 3', 'Event 4'];
   RxString selectedDropdownValue = RxString('');
   var selectedDate = ''.obs;
 
@@ -27,6 +31,11 @@ class UploadPhotoController extends BaseController {
 
   void setCheckbox(bool value) {
     isCheckboxSelected.value = value;
+    value = !value;
+  }
+
+  void setEventSelect(bool value) {
+    isEventSelected.value = value;
     value = !value;
   }
 

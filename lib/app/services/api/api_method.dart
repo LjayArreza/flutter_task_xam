@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 enum ApiMethod { GET, POST, DELETE, PUT, PATCH }
 
 extension HTTPMethodString on ApiMethod {
