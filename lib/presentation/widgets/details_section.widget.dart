@@ -57,7 +57,7 @@ class DetailsSectionWidget extends GetWidget<UploadPhotoController> {
                       ),
                       suffixIcon: Icon(
                         Icons.arrow_drop_down,
-                        color: AppColors.grayColor,
+                        color: AppColors.darkGrayColor,
                       ),
                     ),
                   ),
@@ -81,7 +81,7 @@ class DetailsSectionWidget extends GetWidget<UploadPhotoController> {
                         ),
                         suffixIcon: Icon(
                           Icons.arrow_drop_down,
-                          color: AppColors.grayColor,
+                          color: AppColors.darkGrayColor,
                         ),
                       ),
                     ),
@@ -120,7 +120,7 @@ class DetailsSectionWidget extends GetWidget<UploadPhotoController> {
                         ),
                         suffixIcon: Icon(
                           Icons.arrow_drop_down,
-                          color: AppColors.grayColor,
+                          color: AppColors.darkGrayColor,
                         ),
                       ),
                     ),
