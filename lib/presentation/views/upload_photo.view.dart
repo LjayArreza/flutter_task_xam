@@ -88,7 +88,32 @@ class UploadPhotoView extends BaseView<UploadPhotoController> {
                 const CommentSectionWidget(),
                 const DetailsSectionWidget(),
                 const LinkExistingEventSectionWidget(),
-                const SizedBox(height: 300),
+                Container(
+                  margin: const EdgeInsets.only(
+                    top: 30,
+                    left: 20,
+                    right: 20,
+                    bottom: 230,
+                  ),
+                  child: ElevatedButton(
+                    onPressed: () async {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.buttonColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                    ),
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.7,
+                      child: const Center(
+                        child: Text(
+                          'Next',
+                          style: TextStyle(fontSize: 12),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           )
