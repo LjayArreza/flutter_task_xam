@@ -22,7 +22,7 @@ class AddPhotoSectionWidget extends GetWidget<UploadPhotoController> {
             height: controller.selectedPhotos.value.isEmpty
                 ? MediaQuery.of(context).size.height * 0.2
                 : MediaQuery.of(context).size.height * 0.25,
-            color: Colors.white,
+            color: AppColors.whiteColor,
             child: Padding(
               padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
               child: Column(
@@ -79,7 +79,7 @@ class AddPhotoSectionWidget extends GetWidget<UploadPhotoController> {
                                         child: const Center(
                                           child: Icon(
                                             Icons.close,
-                                            color: Colors.white,
+                                            color: AppColors.whiteColor,
                                             size: 15,
                                           ),
                                         ),

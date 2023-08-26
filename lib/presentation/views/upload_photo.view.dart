@@ -1,6 +1,7 @@
 // ignore_for_file: invalid_use_of_protected_member
 
 import 'package:flutter/material.dart';
+import 'package:flutter_task_xam/app/config/color_constants.dart';
 import 'package:flutter_task_xam/app/core/base/base_view.dart';
 import 'package:flutter_task_xam/app/core/utils/image_utils.dart';
 import 'package:flutter_task_xam/presentation/controllers/upload_photo.controller.dart';
@@ -15,13 +16,13 @@ class UploadPhotoView extends BaseView<UploadPhotoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: AppColors.blackColor,
         title: const Text(
           'New Dairy',
           style: TextStyle(
-            color: Colors.white,
+            color: AppColors.whiteColor,
             fontSize: 18,
           ),
         ),
@@ -30,7 +31,7 @@ class UploadPhotoView extends BaseView<UploadPhotoController> {
             onPressed: () {},
             icon: const Icon(
               Icons.close,
-              color: Colors.white,
+              color: AppColors.whiteColor,
             )),
       ),
       body: ListView(

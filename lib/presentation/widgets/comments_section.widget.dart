@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task_xam/app/config/color_constants.dart';
 import 'package:flutter_task_xam/presentation/controllers/upload_photo.controller.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +15,7 @@ class CommentSectionWidget extends GetWidget<UploadPhotoController> {
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 0.15,
-          color: Colors.white,
+          color: AppColors.whiteColor,
           child: Padding(
             padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
             child: Column(
@@ -42,7 +43,7 @@ class CommentSectionWidget extends GetWidget<UploadPhotoController> {
                     hintText: 'Comments',
                     hintStyle: TextStyle(fontSize: 12),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey),
+                      borderSide: BorderSide(color: AppColors.grayColor),
                     ),
                   ),
                 )

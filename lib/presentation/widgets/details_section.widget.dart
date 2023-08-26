@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task_xam/app/config/color_constants.dart';
 import 'package:flutter_task_xam/presentation/controllers/upload_photo.controller.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:get/get.dart';
@@ -15,7 +16,7 @@ class DetailsSectionWidget extends GetWidget<UploadPhotoController> {
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 0.35,
-          color: Colors.white,
+          color: AppColors.whiteColor,
           child: Padding(
             padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
             child: Column(
@@ -52,11 +53,11 @@ class DetailsSectionWidget extends GetWidget<UploadPhotoController> {
                       hintText: 'Select date',
                       hintStyle: TextStyle(fontSize: 12),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: AppColors.grayColor),
                       ),
                       suffixIcon: Icon(
                         Icons.arrow_drop_down,
-                        color: Colors.grey,
+                        color: AppColors.grayColor,
                       ),
                     ),
                   ),
@@ -76,11 +77,11 @@ class DetailsSectionWidget extends GetWidget<UploadPhotoController> {
                         hintText: 'Select area',
                         hintStyle: TextStyle(fontSize: 12),
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
+                          borderSide: BorderSide(color: AppColors.blackColor),
                         ),
                         suffixIcon: Icon(
                           Icons.arrow_drop_down,
-                          color: Colors.grey,
+                          color: AppColors.grayColor,
                         ),
                       ),
                     ),
@@ -115,11 +116,11 @@ class DetailsSectionWidget extends GetWidget<UploadPhotoController> {
                         hintText: 'Task category',
                         hintStyle: TextStyle(fontSize: 12),
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
+                          borderSide: BorderSide(color: AppColors.blackColor),
                         ),
                         suffixIcon: Icon(
                           Icons.arrow_drop_down,
-                          color: Colors.grey,
+                          color: AppColors.grayColor,
                         ),
                       ),
                     ),
@@ -152,7 +153,7 @@ class DetailsSectionWidget extends GetWidget<UploadPhotoController> {
                       hintText: 'Tags',
                       hintStyle: TextStyle(fontSize: 12),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: AppColors.grayColor),
                       ),
                     ),
                   ),
