@@ -52,6 +52,7 @@ Martin Pulgar Construction is a fictitious construction company. They have appro
 ```
 
 ## Packages Used
+```
 -- dio
 -- get
 -- logger
@@ -60,6 +61,7 @@ Martin Pulgar Construction is a fictitious construction company. They have appro
 -- flutter_typehead
 -- intl
 -- fluttertoast
+```
 
 ## Code Structure Documentation
 ```
