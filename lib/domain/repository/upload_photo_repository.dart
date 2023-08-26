@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter_task_xam/app/services/api/api_endpoint.dart';
 import 'package:flutter_task_xam/app/services/api/api_method.dart';
 import 'package:flutter_task_xam/app/services/dio_service.dart';
