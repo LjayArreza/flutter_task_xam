@@ -2,4 +2,6 @@
 
 class APIEndpoint {
   static String get UPLOAD_PHOTO => "/api/users";
+
+  static String get REGISTER => "/api/test/register";
 }

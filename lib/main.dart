@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Martin Pulgar Construction',
       theme: ThemeData(visualDensity: VisualDensity.adaptivePlatformDensity),
       defaultTransition: Transition.fade,
-      initialRoute: Routes.UPLOAD_PHOTO,
+      initialRoute: Routes.REGISTER,
       getPages: AppPages.pages,
     );
   }

@@ -4,4 +4,5 @@ part of './app_pages.dart';
 
 abstract class Routes {
   static const UPLOAD_PHOTO = '/upload-photo';
+  static const REGISTER = '/register';
 }
